@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • Truth Health Wealth</title>
+  <meta name="description" content="About Truth Health Wealth — Brisbane-based wellbeing company creating science-backed tools that fit effortlessly into everyday routines for workplaces and individuals." />
+
+  <!-- Social -->
+  <meta property="og:title" content="About • Truth Health Wealth" />
+  <meta property="og:description" content="Science-backed tools, Brisbane-based, serving teams across Australia." />
+  <!-- [IMAGE PLACEHOLDER] Replace with an about-page social image -->
+  <meta property="og:image" content="/images/placeholder-about.jpg" />
+
+  <style>
+    :root{
+      /* Brand palette */
+      --bokara-grey:#292926;      /* BOKARA GREY */
+      --rifle-green:#424d2b;      /* RIFLE GREEN */
+      --tahini:#dbb875;           /* TAHINI */
+      --lavender-grey:#c7bfcf;    /* LAVENDER GREY */
+      --geebung:#c2822e;          /* GEEBUNG */
+      --honied-white:#fcedd1;     /* HONIED WHITE */
+
+      --bg:var(--honied-white);
+      --text:var(--bokara-grey);
+      --muted:#4a4a48;
+      --card:#ffffff;
+      --border:rgba(41,41,38,.12);
+      --shadow:0 10px 30px rgba(41,41,38,.1);
+      --radius-xl:18px;
+      --radius-2xl:24px;
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial;line-height:1.5;color:var(--text);background:linear-gradient(180deg,var(--honied-white) 0%,#fff 60%)}
+    a{color:var(--rifle-green);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(252,237,209,.75);border-bottom:1px solid var(--border);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
+    .brand-mark{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--tahini),var(--geebung));display:grid;place-items:center;color:var(--bokara-grey);font-weight:900}
+    .nav-cta{display:flex;gap:10px}
+
+    /* Buttons */
+    .btn{display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:transform .06s ease, box-shadow .2s ease}
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--rifle-green),var(--geebung));color:#fff;box-shadow:var(--shadow)}
+    .btn-ghost{background:#fff;color:var(--rifle-green);border-color:var(--rifle-green)}
+
+    /* Sections */
+    section{padding:56px 0}
+    .section-title{font-size:clamp(24px,3.4vw,36px);margin:0 0 8px}
+    .section-sub{color:var(--muted);margin:0 0 24px}
+
+    /* Hero */
+    .hero{padding:64px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center}
+    .hero h1{font-size:clamp(32px,5vw,46px);line-height:1.1;margin:10px 0 12px}
+    .lead{font-size:clamp(16px,2.5vw,20px);color:var(--muted)}
+    .hero-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-2xl);padding:18px;box-shadow:var(--shadow)}
+    .video-wrap{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/9;background:var(--lavender-grey);display:grid;place-items:center}
+
+    /* Values grid */
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:18px;box-shadow:var(--shadow)}
+
+    /* People grid */
+    .people{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .person{display:flex;gap:14px;align-items:flex-start}
+    .avatar{width:56px;height:56px;border-radius:50%;background:var(--lavender-grey)}
+
+    /* Map block */
+    .map{border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border)}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero-grid,.grid-3,.people{grid-template-columns:1fr}
+      .nav-cta{display:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- =========================== HEADER =========================== -->
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Truth Health Wealth">
+        <div class="brand-mark" aria-hidden="true">THW</div>
+        <div>Truth Health Wealth</div>
+      </div>
+      <div class="nav-cta">
+        <a href="/" class="btn btn-ghost">Home</a>
+        <a href="/corporate" class="btn btn-primary">For Workplaces</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================== HERO =========================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Helping Australians Live Longer, Healthier, Better — Every Day</h1>
+        <p class="lead">We create science‑backed wellbeing tools for workplaces and individuals, helping people start the day with energy, focus, and confidence.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn btn-primary" href="/corporate#trial">Bring better mornings to your team</a>
+          <a class="btn btn-ghost" href="#story">Our story</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <!-- [IMAGE/VIDEO PLACEHOLDER] Team/warehouse or product-in-use clip -->
+        <div class="video-wrap" aria-label="About THW video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="About Truth Health Wealth" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p style="margin-top:10px;color:var(--muted);font-size:14px">A quick introduction to who we are and why we do what we do.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== MISSION =========================== -->
+  <section id="mission">
+    <div class="container">
+      <h2 class="section-title">Why we exist</h2>
+      <p class="section-sub">A healthier, longer life should be simple to start. Whether it’s improving sleep, aligning your circadian rhythm, or reducing fatigue, our goal is to make better living accessible to everyone — from aged‑care nurses and FIFO workers to logistics crews and corporate teams.</p>
+    </div>
+  </section>
+
+  <!-- =========================== STORY =========================== -->
+  <section id="story" style="background:linear-gradient(180deg,#fff 0%, var(--honied-white) 100%)">
+    <div class="container">
+      <h2 class="section-title">From a personal search to a shared solution</h2>
+      <p class="section-sub">Truth Health Wealth began with a simple desire: to wake up with more energy and live with more focus. What started as one person’s curiosity about health and longevity grew into a Brisbane‑based company helping workplaces across Australia bring those same benefits to their people. Today, we ship from our local warehouse to teams nationwide.</p>
+    </div>
+  </section>
+
+  <!-- =========================== VALUES =========================== -->
+  <section id="values">
+    <div class="container">
+      <h2 class="section-title">What we stand for</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Science‑backed</h3>
+          <p>Every product is grounded in research, not fads — designed to support sleep, alertness, and long‑term health.</p>
+        </div>
+        <div class="card">
+          <h3>Effortless integration</h3>
+          <p>Tools that fit into everyday routines with near‑zero friction — plug in, switch on, feel the difference.</p>
+        </div>
+        <div class="card">
+          <h3>Long‑term thinking</h3>
+          <p>We aim for habits and environments that compound toward a longer, stronger, more fulfilled life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== WHO WE HELP =========================== -->
+  <section id="who">
+    <div class="container">
+      <h2 class="section-title">Who we help</h2>
+      <p class="section-sub">We support people who start early, work late, or want a better morning routine.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Healthcare & Aged Care</h3>
+          <p>Early‑shift teams who need steady energy and focus for patient care and safety.</p>
+        </div>
+        <div class="card">
+          <h3>Logistics & Freight</h3>
+          <p>Crews starting before sunrise who benefit from brighter, more alert mornings.</p>
+        </div>
+        <div class="card">
+          <h3>Mining & FIFO</h3>
+          <p>Shift workers in demanding environments, supporting alertness and resilience.</p>
+        </div>
+        <div class="card">
+          <h3>Corporate Offices</h3>
+          <p>Winter mornings and dim spaces where a simple tool boosts morale and momentum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== TRUSTED BY / PROOF =========================== -->
+  <section id="proof" style="background:linear-gradient(180deg,#fff 0%, var(--honied-white) 100%)">
+    <div class="container">
+      <h2 class="section-title">Why workplaces choose us</h2>
+      <p class="section-sub">Simple rollout, science‑grounded guidance, and visible improvements your leaders can share.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Wellbeing that works</h3>
+          <p>Practical, plug‑and‑play tools that teams adopt naturally — in break rooms, at desks, or pre‑shift.</p>
+        </div>
+        <div class="card">
+          <h3>Science‑grounded proof</h3>
+          <p>Benefits aligned with circadian research and supported by our easy‑to‑use Circadian Reset Guide.</p>
+        </div>
+        <div class="card">
+          <h3>Content leaders can share</h3>
+          <p>Comms‑ready templates for internal updates and LinkedIn — celebrating care and culture.</p>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <a class="btn btn-primary" href="/corporate">Explore workplace program</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== BRISBANE BASE =========================== -->
+  <section id="brisbane">
+    <div class="container">
+      <h2 class="section-title">Proudly based in Brisbane</h2>
+      <p class="section-sub">Local supplier, nationwide reach. We ship from our Brisbane warehouse and support teams across Australia.</p>
+      <div class="map">
+        <!-- [MAP PLACEHOLDER] Replace with your Google Maps embed -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.3294274602213!2d153.02512311505742!3d-27.469770982890313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a0ddf8a35ed%3A0x5045675218ce6e0!2sBrisbane%20QLD!5e0!3m2!1sen!2sau!4v1681512334567!5m2!1sen!2sau" 
+          width="100%" height="300" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== TEAM =========================== -->
+  <section id="team" style="background:linear-gradient(180deg,#fff 0%, var(--honied-white) 100%)">
+    <div class="container">
+      <h2 class="section-title">Meet the team</h2>
+      <p class="section-sub">We’re here to help you roll out wellbeing that actually fits how your people work.</p>
+      <div class="people">
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <strong>David Webster</strong><br/>
+            <span style="color:var(--muted)">Founder, Operations</span>
+            <p style="margin:8px 0 0">Focused on simple, science‑backed tools that help teams feel better and perform better — starting with brighter mornings.</p>
+          </div>
+        </div>
+        <!-- [OPTIONAL] Add collaborators as you grow -->
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <strong>[Your Collaborator]</strong><br/>
+            <span style="color:var(--muted)">Customer Success</span>
+            <p style="margin:8px 0 0">Here to help tailor your rollout and share comms templates leaders can use on day one.</p>
+          </div>
+        </div>
+        <div class="card person">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <strong>[Advisor]</strong><br/>
+            <span style="color:var(--muted)">Wellbeing & Research</span>
+            <p style="margin:8px 0 0">Ensuring our guidance aligns with the best available evidence on circadian health and alertness.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== CONTACT / CTA =========================== -->
+  <section id="cta">
+    <div class="container">
+      <h2 class="section-title">Let’s bring better mornings to your team</h2>
+      <p class="section-sub">Have a question or want to try a 2‑week trial? We’ll help you get started fast.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="/corporate#trial">Request a trial</a>
+        <a class="btn btn-ghost" href="mailto:hello@truthhealthwealth.com.au">Email us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== FOOTER =========================== -->
+  <footer style="padding:40px 0;background:var(--bokara-grey);color:#fff">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <div class="brand" aria-label="Truth Health Wealth">
+        <div class="brand-mark" aria-hidden="true">THW</div>
+        <div>Truth Health Wealth</div>
+      </div>
+      <div style="opacity:.85">© <span id="year"></span> Truth Health Wealth • Brisbane, Australia</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

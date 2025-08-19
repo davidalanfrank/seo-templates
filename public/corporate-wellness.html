@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brighter Mornings for Your Team • Truth Health Wealth</title>
+  <meta name="description" content="Corporate wellness landing page for Circadian Glow Lamps — founder video, staff testimonial templates, and a simple path to a 14‑day trial." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Brighter Mornings for Your Team • Truth Health Wealth" />
+  <meta property="og:description" content="Founder video + ready-to-use staff templates for a smooth 14‑day lamp trial." />
+  <meta property="og:type" content="website" />
+  <!-- [IMAGE PLACEHOLDER] Replace with hero image URL -->
+  <meta property="og:image" content="/images/placeholder-hero.jpg" />
+
+  <!-- Brand Color Variables -->
+  <style>
+    :root {
+      --bokara-grey: #292926;   /* BOKARA GREY */
+      --rifle-green: #424d2b;   /* RIFLE GREEN */
+      --tahini: #dbb875;        /* TAHINI */
+      --lavender-grey: #c7bfcf; /* LAVENDER GREY */
+      --geebung: #c2822e;       /* GEEBUNG */
+      --honied-white: #fcedd1;  /* HONIED WHITE */
+
+      --bg: var(--honied-white);
+      --text: var(--bokara-grey);
+      --muted: #4a4a48;
+      --card: #ffffff;
+      --border: rgba(41,41,38,0.12);
+      --shadow: 0 10px 30px rgba(41,41,38,0.10);
+      --radius-xl: 18px;
+      --radius-2xl: 24px;
+      --maxw: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: linear-gradient(180deg, var(--honied-white) 0%, #fff 60%);
+      line-height: 1.5;
+    }
+
+    a { color: var(--rifle-green); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+    .pill { display: inline-block; padding: 8px 14px; border: 1px solid var(--border); border-radius: 999px; background: #fff; color: var(--rifle-green); font-weight: 600; }
+
+    /* Buttons */
+    .btn { display: inline-block; padding: 14px 22px; border-radius: 12px; font-weight: 700; border: 1px solid transparent; cursor: pointer; transition: transform .06s ease, box-shadow .2s ease; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: linear-gradient(135deg, var(--rifle-green), var(--geebung)); color: #fff; box-shadow: var(--shadow); }
+    .btn-primary:hover { filter: brightness(0.98); }
+    .btn-ghost { background: #fff; color: var(--rifle-green); border-color: var(--rifle-green); }
+
+    /* Header */
+    header { position: sticky; top: 0; backdrop-filter: saturate(180%) blur(8px); background: rgba(252,237,209,0.75); border-bottom: 1px solid var(--border); z-index: 10; }
+    .nav { display:flex; align-items:center; justify-content: space-between; padding: 14px 0; }
+    .brand { display:flex; align-items:center; gap: 12px; font-weight: 800; letter-spacing: .3px; }
+    .brand-mark { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--tahini), var(--geebung)); display:grid; place-items:center; color: var(--bokara-grey); font-weight:900; }
+    .nav-cta { display:flex; gap: 10px; }
+
+    /* HERO */
+    .hero { padding: 64px 0 24px; }
+    .hero-grid { display:grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center; }
+    .hero h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.1; margin: 10px 0 14px; }
+    .hero p.lead { font-size: clamp(16px, 2.5vw, 20px); color: var(--muted); }
+
+    .hero-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: 18px; box-shadow: var(--shadow); }
+    .video-wrap { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 16 / 9; background: var(--lavender-grey); display:grid; place-items:center; }
+    .video-wrap iframe, .video-wrap video { width: 100%; height: 100%; border: 0; display:block; }
+
+    .badges { display:flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+
+    /* Sections */
+    section { padding: 56px 0; }
+    .section-title { font-size: clamp(22px, 3vw, 32px); margin: 0 0 10px; }
+    .section-sub { color: var(--muted); margin-bottom: 24px; }
+
+    /* Benefits grid */
+    .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 18px; box-shadow: var(--shadow); }
+
+    /* Steps */
+    .steps { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .step { position: relative; padding-left: 52px; }
+    .step .num { position: absolute; left: 0; top: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--tahini); color: var(--bokara-grey); display:grid; place-items:center; font-weight: 800; }
+
+    /* Testimonials */
+    .testimonials { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .quote { font-size: 16px; }
+    .person { margin-top: 10px; font-weight: 700; }
+    .role { color: var(--muted); font-size: 14px; }
+
+    /* Copy blocks with copy-to-clipboard */
+    .template { position: relative; border: 1px dashed var(--rifle-green); background: #fff; padding: 14px; border-radius: 12px; }
+    .copy-btn { position: absolute; top: 10px; right: 10px; font-size: 13px; padding: 6px 10px; background: var(--rifle-green); color: #fff; border-radius: 7px; border: 0; cursor: pointer; }
+
+    /* Form */
+    form { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: 18px; box-shadow: var(--shadow); }
+    .form-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    label { font-weight: 700; font-size: 14px; }
+    input, select, textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 10px; font-size: 16px; }
+    textarea { min-height: 120px; }
+
+    /* Footer */
+    footer { padding: 40px 0; background: var(--bokara-grey); color: #fff; margin-top: 40px; }
+    footer a { color: var(--tahini); }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(18px); transition: transform .6s cubic-bezier(.2,.65,.3,1), opacity .6s ease; will-change: transform, opacity; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid, .grid-3, .steps, .testimonials, .form-grid { grid-template-columns: 1fr; }
+      .nav-cta { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- =========================== HEADER =========================== -->
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Truth Health Wealth">
+        <img src="https://cdn.shopify.com/s/files/1/0659/4288/0425/files/THW_Bokara_Grey_6d53f93e-b2de-47b5-b9ab-2d85c2ac50e8.png?v=1747403231" alt="Truth Health Wealth Logo" style="height: 66px; width: auto;">
+      </div>
+      <div class="nav-cta">
+        <a href="#trial" class="btn btn-ghost">Request Trial</a>
+        <a href="#contact" class="btn btn-primary">Talk to Sales</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================== HERO =========================== -->
+  <!-- [IMAGE PLACEHOLDER] Add background hero image to this section if desired -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="pill" id="personal-pill">Science Backed Results</span>
+        <h1 id="hero-title">Brighter mornings for your team</h1>
+        <p class="lead">Empower your people to <em>feel their best</em> every morning. The Circadian Glow Lamp supports energy, mood and focus—ideal for early starts, shift work, and winter darkness.</p>
+        <div style="display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;">
+          <a href="#trial" class="btn btn-primary">Start a 14‑day pilot</a>
+          <a href="#pilot" class="btn btn-ghost">How it works</a>
+        </div>
+        <div class="badges" aria-label="Highlights">
+          <span class="pill">10,000 lux morning light</span>
+          <span class="pill">Quick setup</span>
+          <span class="pill">Staff-loved results</span>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="Founder video">
+        <!-- ================== FOUNDER VIDEO (EMBED) ================== -->
+        <!-- Replace the iframe src with your actual video URL (YouTube, Vimeo, or hosted MP4). -->
+        <div class="video-wrap" role="group" aria-label="Founder introduction video">
+          <!-- [VIDEO PLACEHOLDER] -->
+          <iframe 
+            src="https://www.youtube.com/embed/VIDEO_ID?rel=0" 
+            title="Founder Introduction: Why Morning Light Matters" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+        </div>
+        <p style="margin-top:10px; color:var(--muted); font-size:14px;">David, Founder @ THW — a quick intro to the Circadian Glow Lamp</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== WHY LIGHT WORKS =========================== -->
+  <section id="why">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px;">
+        <div>
+          <h2 class="section-title">Why morning light works</h2>
+          <p class="section-sub">Light helps regulate your circadian rhythm, supporting alertness, mood, and consistent sleep—especially valuable for early-shift and winter starts.</p>
+        </div>
+        <div style="text-align: center;">
+          <img src="https://cdn.shopify.com/s/files/1/0659/4288/0425/files/IMG_1023.heic?v=1750231619" alt="Person using Circadian Glow Lamp for morning light therapy" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: var(--shadow);">
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div style="font-size:36px; margin-bottom:10px;" aria-hidden="true">⚡</div>
+          <h3>Energy & Focus</h3>
+          <p>Bright light signals 'daytime' to the brain. Users report feeling more switched on in the first 90 minutes of their day.</p>
+        </div>
+      
+        <div class="card">
+          <div style="font-size:36px; margin-bottom:10px;" aria-hidden="true">🌅</div>
+          <h3>Better Mornings</h3>
+          <p>Counteracts dark mornings and shift-related fatigue so staff start the day proud and prepared.</p>
+        </div>
+      
+        <div class="card">
+          <div style="font-size:36px; margin-bottom:10px;" aria-hidden="true">🔌</div>
+          <h3>Plug & Play</h3>
+          <p>One button, instant brightness. Place on desks or in shared areas—zero learning curve.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- =========================== WHAT THEY REALLY WANT =========================== -->
+  <section style="background: linear-gradient(180deg, #fff 0%, var(--honied-white) 100%);">
+    <div class="container">
+      <h2 class="section-title">A Visible Way to Show Care</h2>
+      <p class="section-sub">HR and wellbeing leaders are always looking for initiatives that genuinely support staff while giving leadership something positive to share. Bright light therapy does both — it improves sleep and energy in daily life, and it’s an authentic story leaders are proud to stand behind.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Empower Everyday Life</h3>
+          <p>Staff feel better rested, more focused at work, and still have energy left over for life outside of it.</p>
+        </div>
+        <div class="card">
+          <h3>Make Care Visible</h3>
+          <p>A simple wellbeing initiative that’s easy to roll out — and easy for leaders to highlight on LinkedIn or the intranet without it feeling forced.</p>
+        </div>
+        <div class="card">
+          <h3>Grounded in Science</h3>
+          <p>From better sleep quality to safer, more productive shifts — improvements backed by research and reinforced with your own pilot results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- =========================== TRUST & PROOF =========================== -->
+<section id="trust" style="background: linear-gradient(180deg, var(--honied-white) 0%, #fff 100%);">
+    <div class="container">
+  
+      <!-- Headline: Sleep status & risk -->
+      <div class="card" style="padding:28px; display:grid; gap:10px; text-align:center;">
+        <h1 class="section-title" style="font-size: clamp(26px, 3.6vw, 40px); margin:0;">
+          Poor sleep costs businesses <span style="color:var(--rifle-green)">$136 billion annually</span> in lost productivity and safety incidents
+          <span style="display:block; font-size:14px; color:var(--muted); margin-top:6px;">
+            — from RAND study
+          </span>
+        </h1>
+      </div>
+  
+      <!-- Stat billboards -->
+      <div class="grid-3" style="margin-top:18px;">
+
+        <!-- Sleep Duration -->
+        <div class="card" aria-label="Sleep improvement">
+          <span class="pill">Sleep Duration</span>
+          <div style="margin-top:10px; font-weight:800; font-size: clamp(28px, 4vw, 44px); line-height:1;">
+            +70 min
+          </div>
+          <p style="margin-top:6px; color:var(--muted);">
+            Participants using bright light therapy increased weeknight sleep by over an hour.
+          </p>
+          <p style="margin-top:4px; font-size:12px; color:#999;">
+            <strong>Oxford Sleep Advances (2024):</strong> Weeknight sleep duration increased by ~70 minutes with morning bright light exposure.  
+            <a href="https://academic.oup.com/sleepadvances/article/5/1/zpae065/7746514?utm_source=chatgpt.com" target="_blank">Read study</a>
+          </p>
+        </div>
+      
+        <!-- Sleep Quality -->
+        <div class="card" aria-label="Wellbeing impact">
+          <span class="pill">Sleep Quality</span>
+          <div style="margin-top:10px; font-weight:800; font-size: clamp(28px, 4vw, 44px); line-height:1;">
+            Better Sleep ↑
+          </div>
+          <p style="margin-top:6px; color:var(--muted);">
+            People using light therapy reported significantly better sleep and mood.
+          </p>
+          <p style="margin-top:4px; font-size:12px; color:#999;">
+            <strong>Springer Meta-Analysis (2024):</strong> Bright light therapy reduced PSQI by 2.9 points and decreased wake-time after sleep onset by ~13 min.  
+            <a href="https://link.springer.com/article/10.1007/s11325-024-03204-z?utm_source=chatgpt.com" target="_blank">Read study</a>
+          </p>
+        </div>
+      
+        <!-- Safety & Focus -->
+        <div class="card" aria-label="Safety impact">
+          <span class="pill">Safety & Focus</span>
+          <div style="margin-top:10px; font-weight:800; font-size: clamp(28px, 4vw, 44px); line-height:1;">
+            ↓ Fatigue Errors
+          </div>
+          <p style="margin-top:6px; color:var(--muted);">
+            More sleep and stronger circadian alignment reduce fatigue-related accidents in transport, healthcare, and industrial settings.
+          </p>
+          <p style="margin-top:4px; font-size:12px; color:#999;">
+            <strong>RAND (2016):</strong> Sleep deprivation costs U.S. businesses up to $136B annually in lost productivity and accidents.  
+          </p>
+        </div>
+      
+      </div>
+      
+  
+      <!-- How it supports outcomes -->
+      <div class="grid-3" style="margin-top:18px;">
+        <div class="card">
+          <h3>Stabilises circadian rhythm</h3>
+          <p>Bright morning light anchors the body clock — critical for early starts, shift work, and winter darkness.</p>
+        </div>
+        <div class="card">
+          <h3>Quick measurable gains</h3>
+          <p>Noticeable increases in sleep duration & quality within 7–10 days of use.</p>
+        </div>
+        <div class="card">
+          <h3>Business benefits</h3>
+          <p>Better-rested staff show improved focus, higher morale, and fewer safety incidents.</p>
+        </div>
+      </div>
+  
+      <!-- Citations -->
+      <!-- <div class="card" style="margin-top:18px; font-size:14px; color:var(--muted);">
+        <p style="margin:0;">
+          <strong>RAND (2016):</strong> Sleep deprivation costs U.S. businesses up to $136B annually in lost productivity and workplace accidents.
+        </p>
+        <p style="margin:0;">
+          <strong>Oxford Sleep Advances (2024):</strong> Weeknight sleep duration increased by ~70 minutes with morning bright light exposure.
+        </p>
+        <p style="margin:0;">
+          <strong>Springer Meta-Analysis (2024):</strong> Bright light therapy reduced PSQI by 2.89 points and decreased wake-time after sleep onset by ~13 min.
+        </p>
+      </div> -->
+  
+      <!-- CTA buttons -->
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+        <a class="btn btn-primary" href="#trial">Start a 14-day pilot</a>
+        <a class="btn btn-ghost" href="#content">Preview comms pack</a>
+      </div>
+  
+    </div>
+  </section>
+  
+
+<!-- =========================== PILOT / FUNNEL STEPS =========================== -->
+<section id="pilot" style="background: linear-gradient(180deg, #fff 0%, var(--honied-white) 100%);">
+    <div class="container">
+      <h2 class="section-title">Share the Love — Get a Free Lamp Trial (Yours to Keep, 14-Day Trial) </h2>
+      <p class="section-sub">Zero risk. Real care. A free kit you can put on a desk tomorrow, plus guides and comms that make it easy to share the story.</p>
+
+      <div class="steps">
+        <div class="card step">
+            <div class="num">1</div>
+            <h3>Claim Your Free Kit</h3>
+            <p>We send your kit.<strong><br>Yours to keep...</strong><br>Which includes:</p>
+            <ul style="margin: 8px 0; padding-left: 20px;">
+              <li>1 × <strong>Circadian Glow Lamp</strong></li>
+              <li>1 × <strong>Hard-copy Quick Start</strong> card</li>
+              <li>1 × <strong>Circadian Reset Guide (PDF)</strong></li>
+              <li>1 × <strong>Comms Pack</strong> (LinkedIn + email templates)</li>
+              <li>3 × <strong>Night Fall Sleep Masks</strong> to gift to your team</li>
+            </ul>
+            <div class="pill" style="margin-top:8px;">Ships within 24 hours • Limited free kits available</div>
+          </div>
+          <div class="card step">
+            <div class="num">2</div>
+            <h3>Light It Up & Share the Good</h3>
+            <p>Place the lamp in a shared space or at a desk.<br>
+            Follow the steps on the <strong>Hard-copy Quick Start </strong> Guide<br>
+            Copy and paste our ready-to-post templates to share:</p>
+            <ul style="margin: 8px 0; padding-left: 20px;">
+              <li><strong>Internal email</strong> announcing the pilot</li>
+              <li><strong>LinkedIn post</strong> your leaders can proudly share</li>
+              <li><strong>Staff blurb</strong> to collect quick quotes/feedback</li>
+            </ul>
+            <div class="pill" style="margin-top:8px;">Make visible care easy.</div>
+          </div>
+      <!-- SLIDE 3: Expand with founder pricing -->
+      <div class="card step">
+        <div class="num">3</div>
+        <h3>Roll Out with Founder Pricing</h3>
+        <p>Love the vibe? Expand with special <strong>bundle pricing</strong>:</p>
+        <ul style="margin: 8px 0; padding-left: 20px;">
+          <li><strong>Team bundles</strong> (5, 10, 20+ units)</li>
+          <li><strong>Priority shipping</strong> for multi-site rollout</li>
+          <li><strong>Co-branded comms</strong> for your internal launch</li>
+        </ul>
+        <div class="pill" style="margin-top:8px;">Reserved after your trial</div>
+      </div>
+
+      </div>
+
+      <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="#trial">Start Your Free Trial Today</a>
+        <a class="btn btn-ghost" href="#content">Preview the Comms Pack</a>
+      </div>
+    </div>
+  </section>
+  
+  
+<!-- =========================== CONTENT THEY CAN SHARE =========================== -->
+<section id="content" style="background: linear-gradient(180deg, #fff 0%, var(--honied-white) 100%);">
+    <div class="container">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title">Content leaders will love to share</h2>
+            <p class="section-sub">See how real posts look in the wild — ready for LinkedIn and internal comms.</p>
+          </div>
+  
+      <!-- Collage showcase -->
+      <figure  style="padding:18px; text-align:center;">
+        <!-- Replace src with your exported collage -->
+        <img 
+          src="https://cdn.shopify.com/s/files/1/0659/4288/0425/files/2_7c6a4fb2-d946-4141-a47d-d24c30ffe647.png?v=1755497142" 
+          alt="Collage of a LinkedIn post and internal email announcing the Circadian Glow Lamp 14-day pilot" 
+          style="max-width:100%; height:auto; border-radius:12px;">
+        <figcaption style="margin-top:10px; color:var(--muted); font-size:14px;">
+          LinkedIn and internal email, side-by-side — a simple, visible way to show care.
+        </figcaption>
+      </figure>
+  
+      <!-- Channel highlights -->
+      <div class="grid-3" style="margin-top:18px;">
+        <div class="card">
+          <h3>Internal email</h3>
+          <p>Announce the 14-day pilot, outline the quick-start steps, and invite short staff quotes.</p>
+        </div>
+        <div class="card">
+          <h3>LinkedIn post</h3>
+          <p>Leaders proudly share a tangible wellbeing action — boosting employer brand and morale.</p>
+        </div>
+        <div class="card">
+          <h3>Guides & assets</h3>
+          <p>The <em>Circadian Reset Guide</em> (PDF) and quick-start card make rollout effortless.</p>
+          <a class="btn btn-ghost" href="#">Download sample guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- =========================== LOCAL / TRUST SECTION =========================== -->
+<section id="local" style="background:#f9faf7; padding:60px 0;">
+    <div class="container" style="text-align:center; max-width:800px;">
+      <h2 class="section-title">We’re Local. We’re Trusted.</h2>
+      <p style="font-size:18px; color:#424d2b; margin-top:8px;">
+        Proudly <strong>Australian owned & operated</strong>, we ship every order from our warehouse here in 
+        <strong>sunny Brisbane</strong>. When you support us, you’re backing a homegrown business that cares about 
+        local wellbeing.
+      </p>
+  
+      <div class="grid-3" style="margin-top:32px;">
+        <div class="card" style="background:#fff; padding:20px; border-radius:12px;">
+          <div style="font-size:32px; margin-bottom:8px;">🇦🇺</div>
+          <h3>Australian Owned</h3>
+          <p>We’re a local business — built right here in Australia, supporting Aussie jobs and families.</p>
+        </div>
+        <div class="card" style="background:#fff; padding:20px; border-radius:12px;">
+          <div style="font-size:32px; margin-bottom:8px;">☀️</div>
+          <h3>Based in Brisbane</h3>
+          <p>Our warehouse is in sunny Brisbane, where every lamp is carefully packed and shipped to you.</p>
+        </div>
+        <div class="card" style="background:#fff; padding:20px; border-radius:12px;">
+          <div style="font-size:32px; margin-bottom:8px;">🤝</div>
+          <h3>Trusted by Aussies</h3>
+          <p>From clinics to homes, people across Australia choose us for quality, care, and science-backed results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- =========================== TRIAL FORM =========================== -->
+  <section id="trial">
+    <div class="container">
+      <h2 class="section-title">Book your 14‑day pilot</h2>
+      <p class="section-sub">We’ll tailor your page and ship lamps to one location to get started quickly.</p>
+      <form id="lead-form" aria-label="Pilot request form">
+        <div class="form-grid">
+          <div>
+            <label for="company">Company</label>
+            <input id="company" name="company" placeholder="e.g., Acme Corp" required />
+          </div>
+          <div>
+            <label for="contact">Your Name</label>
+            <input id="contact" name="contact" placeholder="First & Last" required />
+          </div>
+          <div>
+            <label for="email">Work Email</label>
+            <input id="email" type="email" name="email" placeholder="you@company.com" required />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" placeholder="Mobile or desk" />
+          </div>
+          <div>
+            <label for="team">Team / Department</label>
+            <input id="team" name="team" placeholder="e.g., Customer Ops (early shift)" />
+          </div>
+          <div>
+            <label for="qty">Pilot Qty</label>
+            <select id="qty" name="qty">
+              <option>2 lamps</option>
+              <option>3 lamps</option>
+              <option>4 lamps</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:12px;">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" placeholder="Tell us about shift patterns, winter hours, or office layout"></textarea>
+        </div>
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <button class="btn btn-primary" type="submit">Request pilot</button>
+          <a class="btn btn-ghost" href="#contact">Talk to sales</a>
+        </div>
+        <p style="margin-top:8px; color:var(--muted); font-size: 14px;">By submitting, you agree to be contacted about your pilot setup. We respect your time and inbox.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================== CONTACT =========================== -->
+  <section id="contact" style="background:#fff;">
+    <div class="container">
+      <h2 class="section-title">Prefer a quick call?</h2>
+      <p class="section-sub">We’ll tailor your landing page, ship lamps, and share your comms pack.</p>
+      <div class="card">
+        <!-- [IMAGE PLACEHOLDER] founder headshot or brand mark -->
+        <p><strong>David — Founder, Truth Health Wealth</strong><br />
+        Brisbane-based. Happy to jump on a quick call to plan your pilot. </p>
+        <p>Email: <a href="mailto:hello@truthhealthwealth.com.au">hello@truthhealthwealth.com.au</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================== FOOTER =========================== -->
+  <footer>
+    <div class="container">
+      <div style="display:flex; justify-content: space-between; align-items:center; gap:16px; flex-wrap:wrap;">
+        <div class="brand" aria-label="Truth Health Wealth">
+          <div class="brand-mark" aria-hidden="true">THW</div>
+          <div>Truth Health Wealth</div>
+        </div>
+        <div style="opacity:.85;">© <span id="year"></span> Truth Health Wealth • All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================== PERSONALISATION & COPY HELPERS =========================== -->
+  <script>
+    // Personalize the page using URL params, e.g. ?company=Qantas&industry=Airlines
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const company = params.get('company');
+      const industry = params.get('industry');
+      const heroTitle = document.getElementById('hero-title');
+      const pill = document.getElementById('personal-pill');
+      if (company) {
+        heroTitle.textContent = `Brighter mornings for ${company}`;
+        pill.textContent = `Tailored for ${company}`;
+      } else if (industry) {
+        heroTitle.textContent = `Brighter mornings for ${industry} teams`;
+        pill.textContent = `Tailored for ${industry}`;
+      }
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+
+    // Copy-to-clipboard for templates
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.copy-btn');
+      if (!btn) return;
+      const sel = btn.getAttribute('data-copy');
+      const node = document.querySelector(sel);
+      if (!node) return;
+      const clone = node.cloneNode(true);
+      // Remove buttons from copied text
+      clone.querySelectorAll('.copy-btn').forEach(b => b.remove());
+      const text = clone.innerText.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => (btn.textContent = 'Copy'), 1200);
+      });
+    });
+
+    // Basic form handler (placeholder) — replace action with your backend endpoint
+    document.getElementById('lead-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(this).entries());
+      console.log('Lead submitted', data);
+      alert('Thanks! We\'ll be in touch within one business day to set up your pilot.');
+      // TODO: POST to your endpoint
+      this.reset();
+    });
+
+    // Scroll reveal on cards/steps
+    (function() {
+      const targets = Array.from(document.querySelectorAll('.card, .step'));
+      if (!('IntersectionObserver' in window) || targets.length === 0) {
+        // Fallback: show immediately
+        targets.forEach(el => el.classList.add('visible'));
+        return;
+        }
+      const groups = new Map();
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      targets.forEach((el) => {
+        el.classList.add('reveal');
+        const parent = el.parentElement;
+        const idx = (groups.get(parent) || 0);
+        el.style.transitionDelay = `${Math.min(idx * 80, 400)}ms`;
+        groups.set(parent, idx + 1);
+        io.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>
